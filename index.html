@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f1f1f1;
+  padding:10px;
+  font-family: Constantia;
+}
+
+    
+.header {
+  background-color: #fff;
+    position:relative;
+    height:500px;
+    background-image: url(img/4.jpg);
+    background-repeat: no-repeat;
+    background-size:100% 500px;
+    }
+    .header h1{
+        position: absolute; 
+        text-align: center;
+        font-size: 50px; 
+        width:100%;
+        top:35%;
+    } 
+.topnav {
+  overflow: hidden;
+  background: url('img/head.jpg');
+  margin-top:-4px;
+  margin-bottom:15px;
+    position: sticky;
+    top:0;
+    z-index:1;
+}
+
+    
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+} 
+    
+    .active{
+        background: #2db071;
+    }
+.topnav a:hover:not(.active) {
+  background-color: #ddd;
+  color: black;
+}  
+    
+.footer {
+  background: url(img/head.jpg);
+  padding: 10px;
+  text-align: center;
+  color:white;
+  clear:left;
+}
+.follow a{font-size:2em}
+.follow a i{font-size:1.4em;}
+
+.main{
+ width:75%;  
+ float:left;
+ overflow:hidden;
+ padding-right:14px; 
+}
+
+.con1{ 
+ background:white;
+ padding:10px 14px;
+    margin-bottom: 7px;
+    }  
+.image img{ 
+    height:400px;
+    width:100%;
+}
+
+.side{
+ width:25%;  
+ float:left;
+ overflow:hidden;
+}
+
+    .con2{
+        background:white;
+        padding:10px 14px;
+        margin-bottom: 12px;
+        width:100%;
+    } 
+    .img img{ 
+        height:170px;
+        width:100%;
+        opacity:0.5;
+		transition: all .8s;
+    }
+    .img:hover img{ 
+        opacity:1;
+    }
+    .img{
+        margin-bottom:9px;
+        box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.5);
+    }
+    .dec{
+        padding: 10px;
+        text-align:center;
+            
+    }
+    
+    .upPage a{
+        font-size: 40px;
+        background: #aaa;
+        text-align: center;
+        width: 50px;
+        border-radius:80px;
+        position: fixed;
+        bottom: 10px;
+        right: 0;
+        opacity: 0.5;
+        text-decoration: none;
+        color:black;
+    }
+    .upPage a:hover{
+        background:#4a4a4a; 
+        color:white;
+        opacity: 0.9;
+    } 
+    .follow a{
+        display:block;
+        color:white;
+        padding:15px 60px;
+        text-decoration:none;
+        width:100%;
+        margin-bottom:7px;
+		transition: all .8s; 
+    }
+    .follow a:hover 
+    {  
+        border:1px solid teal;
+    }
+    
+    .follow a[href='Facebook']{
+        background: url(icons8-facebook-96.png) no-repeat;
+        background-size: 50px 46px; 
+    }
+    
+    .follow a[href='GetHub']{
+        background: url(img_github_logo.png) no-repeat;
+        background-size: 50px 50px;
+    }
+    
+    .follow a[href='Gmail']{
+        background: url(img_google.jpg)  no-repeat;
+        background-size: 50px 46px;
+    }
+    .follow a[href='twitter']{ 
+        background: url(icons8-twitter-96.png) no-repeat;
+        background-size: 50px 46px;
+    }
+    
+    
+   @media screen and (max-width: 900px) {
+       .main , .side{width:100%;padding:0;}
+   } 
+    
+    @media screen and (max-width: 600px) {
+        .topnav{
+            position: static;}
+        .topnav a{
+            float:none;
+            width:100%;
+        }
+   } 
+</style>
+</head>
+<body>
+
+<div id="header" class="header"> 
+   <h1 ><span style="background:#a7c1ce;opacity: 0.6 ;color: #2c4962">MT</span><span style="background:#1976d2;color: white">SM</span></h1>
+</div>
+
+<div class="topnav">
+  <a href="#header" class="active">Home</a>
+  <a href="#new">News</a>
+  <a href="#con">Contant</a>
+  <a href="#about" style="float: right">About</a>
+</div>
+
+    <div class="upPage"><a href="#header">&#8593; </a></div>
+    
+ <div class="main">
+ 
+ 	<div class="con1" >
+      <h2 id='con'> White Labtop</h2>
+      <p>Title description, Dec 7, 2017</p>
+      <div class="image"> 
+        <a href="1.jpg"  target="_blank"> <img src="img/1.jpg" alt="2 phto" width="600" height="400"/></a>  
+      </div>
+      title text
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+      </p>
+    </div>
+    
+ 	<div class="con1">
+      <h2>Dark Labtop</h2>
+      <p>Title description, Dec 7, 2017</p>
+      <div class="image">
+        <a href="2.jpg" target="_blank"> <img src="img/2.jpg" alt="2 phto" width="600" height="400"/></a>  
+      </div>
+      title text
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+      </p>
+    </div>
+ 	
+ 	<div class="con1">
+      <h2>Car Color Red</h2>
+      <p>Title description, Dec 7, 2017</p>
+      <div class="image">
+        <a href="3.jpg" target="_blank"> <img src="img/3.jpg" alt="2 phto" width="600" height="400"/></a>  
+      </div>
+      title text
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+      </p>
+    </div>
+ 	
+ 	<div class="con1">
+      <h2>Camera 4K</h2>
+      <p>Title description, Dec 7, 2017</p>
+      <div class="image">
+        <a href="6.jpg" target="_blank"> <img src="img/6.jpg" alt="2 phto" width="600" height="400"/></a>  
+      </div>
+      title text
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+      </p>
+    </div>
+ 	
+ 	<div class="con1">
+      <h2>Windows 10</h2>
+      <p>Title description, Dec 7, 2017</p>
+      <div class="image">
+        <a href="5.jpg" target="_blank"> <img src="img/5.jpg" alt="2 phto" width="600" height="400"/></a>  
+      </div>
+      title text
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+      </p>
+    </div>
+ 	
+ </div>
+ 
+ <div class="side" id='about'>
+ 
+ 	<div class="con2" >
+      <h2 >About Me </h2>
+      <div class="image">
+          <img src="img/8.jpg" alt="about me" />
+      </div>
+      <p>Im Mutsam Mahommed Shife Devlopment Program website Using HTML and CSS I live in sudan I like sleep , eat ,swim under raniy and play with playstaion</p>
+    </div>
+    
+    <div class="con2" id='new'>
+      <h2>Popular Post</h2>
+      
+      <div class="img">
+          <a href="#"> <img src="img/2.jpg" /> </a>
+          <div class="dec"> Dark Labtop</div>
+      </div>
+      
+      <div class="img">
+          <a href="#"> <img src="img/5.jpg" /> </a>
+          <div class="dec">Windows 10</div>
+      </div>
+      
+      <div class="img">
+         <a href="#"><img src="img/6.jpg" /> </a> 
+          <div class="dec">Camera</div>
+      </div> 
+      
+    </div>
+    
+    <div class="con2" style="background:url('img/head.jpg');color:white;">
+      <h2>Follow Me</h2>
+        <div class="follow">
+		<a href="Facebook" target="_blank" > <i class="fab fa-facebook" ></i>  Facebook</a>
+        <a href="GetHub"   target="_blank" > <i class="fab fa-github"   ></i>  GetHub  </a>
+        <a href="Gmail"    target="_blank" > <i class="fas fa-envelope" ></i>  Gmail   </a>
+        <a href="twitter"  target="_blank" > <i class="fab fa-twitter"  ></i>  Twitter </a>
+        </div>
+    </div>
+    
+ </div>
+ 
+<div class="footer">
+  <p>Footer</p>
+</div>
+  
+</body>
+</html>
